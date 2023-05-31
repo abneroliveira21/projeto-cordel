@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'titulo';
+    src: url('fontes/PassionOne-Bold.ttf')
+    format('opentype');
+    font-weight:normal ;
+}
+
+@font-face {
+    font-family: 'texto';
+    src: url('fontes/Sriracha-Regular.ttf')
+    format('opentype');
+    font-weight: normal;
+}
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+:root{
+    --font-padrao: Arial,verdana,Helvetica,sans-serif;
+    --font-titulo: 'titulo',cursive;
+    --font-texto: 'texto',cursive;
+}
+
+html, body{
+    min-height: 100vh;
+    background-color: aliceblue;
+    font-family: var(--font-padrao);
+
+}
+
+header{
+  
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+  padding: top 50px;
+  font-variant: small-caps;
+  font-family: var(--font-titulo);
+  font-size: 10vw;
+}
+
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover, footer a:hover{
+text-decoration:underline;
+}
+
+section{
+   padding-top: 10vh; 
+   padding-bottom: 10vh;
+   padding-left: 30px;
+   line-height: 2em;
+   font-family: var(--font-texto);
+   font-size: 3.5vw;
+}
+
+section > p{
+    padding-bottom: 2em;
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(43, 40, 40);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px hsla(0, 0%, 0%, 0.514);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem > p{
+    background-color: rgba(0, 0, 0, 0.363);
+    display: inline-block;
+    padding: 5px;
+    text-shadow:1px 1px 0px black;
+}
+
+section#joaninha{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+   
+}
+
+section#folha{
+    background-image: url('../imagens/background002.jpg');
+}
+
+footer{
+    padding: 10px;
+    
+    font-family: var(--font-texto);
+    text-align: center; 
+
+    background-color: black;
+    color: white;
+}
